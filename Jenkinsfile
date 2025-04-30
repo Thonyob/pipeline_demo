@@ -33,5 +33,13 @@ pipeline {
       }
     }
   }
+  post{
+   success{
+      echo "Exitoso"
+    }
+   failure{
+      echo "Error"
+   }
+  }
 }  
   
