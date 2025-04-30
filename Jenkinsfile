@@ -26,7 +26,12 @@ pipeline {
           input(message: 'deploy', ok: 'hagasmolo')
         }
       }
+   }
+    stage('Implementar en Produccion'){
+     steps{
+        echo "Implementar en produccion"
+      }
+    }
   }
- }
 }  
   
