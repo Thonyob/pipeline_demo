@@ -20,5 +20,11 @@ pipeline {
        }
       }
     }
+    stage('Deploy'){
+      steps{
+        timeout(time: 60 , unit: 'SECONDS'){
+          input(message: 'deploy', ok: 'hagasmolo')
+        }
+      }
   }
 }
