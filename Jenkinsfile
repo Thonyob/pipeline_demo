@@ -7,7 +7,7 @@ pipeline {
       }
     }
     stage('Test') {
-      paralell{
+      parallel{
        stage('test Windows'){
         steps{
           echo "Run Windows"
