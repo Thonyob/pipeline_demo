@@ -3,13 +3,21 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-           sh 'chmod a+x run_build_script.sh'
-           sh './run_build_script.sh'
+        echo "jenkins file"
       }
     }
     stage('Test') {
-      steps {
-       echo "Run tests" 
+      paralell{
+       stage('test Windows'){
+        steps{
+          echo "Run Windows"
+        }
+       }
+       stage('test Linux'){
+        steps{
+          echo "Run Linux"
+        }
+       }
       }
     }
   }
